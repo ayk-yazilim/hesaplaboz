@@ -5,4 +5,13 @@
 <main class="wrap"><span class="crumb">Finans</span><h1>Yatırım Getirisi Hesaplama</h1><p>Yatırımının kazanç veya kaybını yüzde olarak gör.</p><div class="calc"><div class="grid"><div><label>Yatırım Tutarı (TL)</label><input id="i" type="number" value="100000"></div><div><label>Son Değer (TL)</label><input id="f" type="number" value="125000"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Kazanç / zarar</p><div class="big" id="g"></div><p>Getiri oranı</p><div class="big" id="r"></div></div><div class="note">Vergi, enflasyon ve zaman etkisi dahil değildir.</div></div>
 <section class="seo-copy"><h2>Yatırım Getirisi Hesaplama nasıl hesaplanır?</h2><p>Yatırım getirisi, başlangıç değerine göre kazanç veya kaybın yüzdesini gösterir.</p></section>
 <section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}function calc(){let i=+i1.value||0,f=+f1.value||0,g=f-i;g1.textContent=tl(g);r.textContent=i?(g/i*100).toLocaleString('tr-TR',{maximumFractionDigits:2})+' %':'Tanımsız';result.style.display='block'}const i1=document.getElementById('i'),f1=document.getElementById('f'),g1=document.getElementById('g');calc();</script></body></html>
+</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}
+const investmentInput=document.getElementById('i'), finalInput=document.getElementById('f');
+const gainOutput=document.getElementById('g'), roiOutput=document.getElementById('r'), resultBox=document.getElementById('result');
+function calc(){
+ const investment=Number(investmentInput.value)||0, finalValue=Number(finalInput.value)||0, gain=finalValue-investment;
+ gainOutput.textContent=tl(gain);
+ roiOutput.textContent=investment ? ((gain/investment)*100).toLocaleString('tr-TR',{maximumFractionDigits:2})+' %' : 'Tanımsız';
+ resultBox.style.display='block';
+}
+calc();</script></body></html>

@@ -5,4 +5,11 @@
 <main class="wrap"><span class="crumb">İşletme</span><h1>Toplam Maliyet Hesaplama</h1><p>Bir iş veya ürün için maliyet kalemlerini tek yerde topla.</p><div class="calc"><div class="grid"><div><label>Sabit Gider (TL)</label><input id="a" type="number" value="50000"></div><div><label>Değişken Gider (TL)</label><input id="b" type="number" value="30000"></div><div><label>Diğer Gider (TL)</label><input id="c" type="number" value="5000"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Toplam maliyet</p><div class="big" id="t"></div></div><div class="note">Bu araç verdiğin maliyet kalemlerini toplar.</div></div>
 <section class="seo-copy"><h2>Toplam Maliyet Hesaplama nasıl hesaplanır?</h2><p>Toplam maliyet, ilgili iş veya döneme ait maliyet kalemlerinin toplamıdır.</p></section>
 <section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}function calc(){let a=+a1.value||0,b=+b1.value||0,c=+c1.value||0;t.textContent=tl(a+b+c);result.style.display='block'}const a1=document.getElementById('a'),b1=document.getElementById('b'),c1=document.getElementById('c');calc();</script></body></html>
+</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}
+const fixedInput=document.getElementById('a'), variableInput=document.getElementById('b'), otherInput=document.getElementById('c');
+const totalOutput=document.getElementById('t'), resultBox=document.getElementById('result');
+function calc(){
+ const fixed=Number(fixedInput.value)||0, variable=Number(variableInput.value)||0, other=Number(otherInput.value)||0;
+ totalOutput.textContent=tl(fixed+variable+other); resultBox.style.display='block';
+}
+calc();</script></body></html>

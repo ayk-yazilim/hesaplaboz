@@ -5,4 +5,10 @@
 <main class="wrap"><span class="crumb">İnşaat & Ev</span><h1>Metrekare Alan Hesaplama</h1><p>Oda, zemin veya yüzey alanını hızlıca bul.</p><div class="calc"><div class="grid"><div><label>Uzunluk (m)</label><input id="l" type="number" value="5"></div><div><label>Genişlik (m)</label><input id="w" type="number" value="4"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Alan</p><div class="big" id="a"></div></div><div class="note">Dikdörtgen alanı uzunluk × genişliktir.</div></div>
 <section class="seo-copy"><h2>Metrekare Alan Hesaplama nasıl hesaplanır?</h2><p>Dikdörtgen bir yüzeyin alanı uzunluk ile genişliğin çarpılmasıyla bulunur.</p></section>
 <section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>function calc(){let l=+l1.value||0,w=+w1.value||0;a.textContent=(l*w).toLocaleString('tr-TR',{maximumFractionDigits:2})+' m²';result.style.display='block'}const l1=document.getElementById('l'),w1=document.getElementById('w');calc();</script></body></html>
+</main><script>const lengthInput=document.getElementById('l'), widthInput=document.getElementById('w');
+const areaOutput=document.getElementById('a'), resultBox=document.getElementById('result');
+function calc(){
+ const length=Number(lengthInput.value)||0, width=Number(widthInput.value)||0;
+ areaOutput.textContent=(length*width).toLocaleString('tr-TR',{maximumFractionDigits:2})+' m²'; resultBox.style.display='block';
+}
+calc();</script></body></html>

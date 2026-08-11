@@ -5,4 +5,13 @@
 <main class="wrap"><span class="crumb">Günlük</span><h1>Tarih Farkı Hesaplama</h1><p>Başlangıç ve bitiş tarihini seçerek aradaki gün farkını bul.</p><div class="calc"><div class="grid"><div><label>Başlangıç</label><input id="a" type="date"></div><div><label>Bitiş</label><input id="b" type="date"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Gün farkı</p><div class="big" id="d"></div></div><div class="note">Sonuç iki tarih arasındaki tam gün farkıdır.</div></div>
 <section class="seo-copy"><h2>Tarih Farkı Hesaplama nasıl hesaplanır?</h2><p>İki tarih arasındaki süre, tarihlerin gün cinsinden farkı alınarak hesaplanır.</p></section>
 <section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>const a=document.getElementById('a'),b=document.getElementById('b'),now=new Date();a.value=now.toISOString().slice(0,10);b.value=new Date(now.getTime()+30*86400000).toISOString().slice(0,10);function calc(){let x=new Date(a.value),y=new Date(b.value);d.textContent=isNaN(x)||isNaN(y)?'Tarih seç':Math.round((y-x)/86400000).toLocaleString('tr-TR')+' gün';result.style.display='block'}calc();</script></body></html>
+</main><script>const startInput=document.getElementById('a'), endInput=document.getElementById('b'), dayOutput=document.getElementById('d'), resultBox=document.getElementById('result');
+const now=new Date();
+startInput.value=now.toISOString().slice(0,10);
+endInput.value=new Date(now.getTime()+30*86400000).toISOString().slice(0,10);
+function calc(){
+ const start=new Date(startInput.value), end=new Date(endInput.value);
+ dayOutput.textContent=isNaN(start)||isNaN(end) ? 'Tarih seç' : Math.round((end-start)/86400000).toLocaleString('tr-TR')+' gün';
+ resultBox.style.display='block';
+}
+calc();</script></body></html>

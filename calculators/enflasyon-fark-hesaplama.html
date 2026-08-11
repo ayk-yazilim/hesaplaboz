@@ -5,4 +5,11 @@
 <main class="wrap"><span class="crumb">Finans</span><h1>Enflasyon Farkı Hesaplama</h1><p>Bir tutarın verilen enflasyon oranıyla değişimini hesapla.</p><div class="calc"><div class="grid"><div><label>Başlangıç Tutarı (TL)</label><input id="p" type="number" value="100000"></div><div><label>Enflasyon (%)</label><input id="r" type="number" value="30"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Fark</p><div class="big" id="d"></div><p>Yeni karşılık</p><div class="big" id="t"></div></div><div class="note">Tek dönemlik basit enflasyon karşılığıdır; resmi TÜFE verisi değildir.</div></div>
 <section class="seo-copy"><h2>Enflasyon Farkı Hesaplama nasıl hesaplanır?</h2><p>Başlangıç tutarı enflasyon oranıyla çarpılarak fiyat düzeyindeki değişim bulunur.</p></section>
 <section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}function calc(){let p=+p1.value||0,r=+r1.value/100||0,d=p*r;d1.textContent=tl(d);t.textContent=tl(p+d);result.style.display='block'}const p1=document.getElementById('p'),r1=document.getElementById('r'),d1=document.getElementById('d');calc();</script></body></html>
+</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}
+const principalInput=document.getElementById('p'), rateInput=document.getElementById('r');
+const differenceOutput=document.getElementById('d'), totalOutput=document.getElementById('t'), resultBox=document.getElementById('result');
+function calc(){
+ const principal=Number(principalInput.value)||0, rate=(Number(rateInput.value)||0)/100, difference=principal*rate;
+ differenceOutput.textContent=tl(difference); totalOutput.textContent=tl(principal+difference); resultBox.style.display='block';
+}
+calc();</script></body></html>

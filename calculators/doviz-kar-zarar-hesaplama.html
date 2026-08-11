@@ -5,21 +5,14 @@
 <main class="wrap"><span class="crumb">Finans</span><h1>Döviz Kâr Zarar Hesaplama</h1><p>Kur ve döviz miktarından TL bazında farkı gör.</p><div class="calc"><div class="grid"><div><label>Alış Kuru (TL)</label><input id="b" type="number" value="35"></div><div><label>Güncel Kur (TL)</label><input id="s" type="number" value="40"></div><div><label>Döviz Miktarı</label><input id="q" type="number" value="1000"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Kâr / zarar</p><div class="big" id="g"></div><p>Getiri oranı</p><div class="big" id="r"></div></div><div class="note">Komisyon, spread ve vergi dahil değildir. Kurları kullanıcı girer.</div></div>
 <section class="seo-copy"><h2>Döviz Kâr Zarar Hesaplama nasıl hesaplanır?</h2><p>Güncel kur ile alış kuru arasındaki fark döviz miktarıyla çarpılarak TL bazında sonuç bulunur.</p></section>
 <section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>
-function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}
-const buyInput=document.getElementById('b');
-const sellInput=document.getElementById('s');
-const qtyInput=document.getElementById('q');
-const gainOutput=document.getElementById('g');
-const roiOutput=document.getElementById('r');
-const resultBox=document.getElementById('result');
+</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}
+const buyInput=document.getElementById('b'), sellInput=document.getElementById('s'), qtyInput=document.getElementById('q');
+const gainOutput=document.getElementById('g'), roiOutput=document.getElementById('r'), resultBox=document.getElementById('result');
 function calc(){
-  const buy=Number(buyInput.value)||0;
-  const sell=Number(sellInput.value)||0;
-  const qty=Number(qtyInput.value)||0;
-  const gain=(sell-buy)*qty;
-  gainOutput.textContent=tl(gain);
-  roiOutput.textContent=buy ? (((sell-buy)/buy)*100).toLocaleString('tr-TR',{maximumFractionDigits:2})+' %' : 'Tanımsız';
-  resultBox.style.display='block';
+ const buy=Number(buyInput.value)||0, sell=Number(sellInput.value)||0, qty=Number(qtyInput.value)||0;
+ const gain=(sell-buy)*qty;
+ gainOutput.textContent=tl(gain);
+ roiOutput.textContent=buy ? (((sell-buy)/buy)*100).toLocaleString('tr-TR',{maximumFractionDigits:2})+' %' : 'Tanımsız';
+ resultBox.style.display='block';
 }
-</script></body></html>
+calc();</script></body></html>

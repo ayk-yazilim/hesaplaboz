@@ -5,4 +5,10 @@
 <main class="wrap"><span class="crumb">İşletme</span><h1>Ciro Hesaplama</h1><p>Satış fiyatı ve adet bilgisiyle toplam satış cirosunu hızlıca bul.</p><div class="calc"><div class="grid"><div><label>Birim Satış Fiyatı (TL)</label><input id="p" type="number" value="500"></div><div><label>Satış Adedi</label><input id="q" type="number" value="250"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Toplam ciro</p><div class="big" id="t"></div></div><div class="note">Ciro satış geliridir; kâr anlamına gelmez.</div></div>
 <section class="seo-copy"><h2>Ciro Hesaplama nasıl hesaplanır?</h2><p>Basit ciro hesabında birim satış fiyatı ile satış adedi çarpılır.</p></section>
 <section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}function calc(){let p=+document.getElementById('p').value||0,q=+document.getElementById('q').value||0;t.textContent=tl(p*q);result.style.display='block'}calc();</script></body></html>
+</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}
+const priceInput=document.getElementById('p'), qtyInput=document.getElementById('q'), totalOutput=document.getElementById('t'), resultBox=document.getElementById('result');
+function calc(){
+ const price=Number(priceInput.value)||0, qty=Number(qtyInput.value)||0;
+ totalOutput.textContent=tl(price*qty); resultBox.style.display='block';
+}
+calc();</script></body></html>
