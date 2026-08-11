@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="tr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yüzde Değişim Hesaplama | HesaplaBoz</title>
+<meta name="description" content="Eski ve yeni değer arasındaki yüzde artış veya azalışı hesapla.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/oran-degisimi.html">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="nav"><a class="brand" href="../index.html"><span class="brand-mark">H</span><span>Hesapla<span>Boz</span></span></a><a class="back" href="../index.html">← Tüm hesaplamalar</a></header>
+<main class="wrap"><span class="crumb">Günlük</span><h1>Yüzde Değişim Hesaplama</h1><p>Bir fiyatın, satışın veya değerin ne kadar arttığını ya da azaldığını yüzde olarak bul.</p>
+<div class="calc"><div class="grid"><div><label>Eski Değer</label><input id="oldv" type="number" value="100"></div><div><label>Yeni Değer</label><input id="newv" type="number" value="125"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Yüzde değişim</p><div class="big" id="change"></div><p>Sonuç</p><div class="big" id="direction"></div></div><div class="note">Eski değer sıfırsa yüzde değişimi matematiksel olarak tanımsızdır.</div></div>
+<section class="seo-copy"><h2>Yüzde Değişim Hesaplama nasıl hesaplanır?</h2><p>Yüzde değişim, yeni değer ile eski değer arasındaki farkın eski değere bölünüp 100 ile çarpılmasıyla bulunur. Pozitif sonuç artışı, negatif sonuç azalışı ifade eder.</p></section>
+</main><script>function calc(){const o=+oldv.value||0,n=+newv.value||0;if(o===0){change.textContent='Tanımsız';direction.textContent='Eski değer 0 olamaz'}else{const c=(n-o)/o*100;change.textContent=(c>=0?'+':'')+c.toLocaleString('tr-TR',{maximumFractionDigits:2})+' %';direction.textContent=c>0?'Artış':c<0?'Azalış':'Değişim yok'}result.style.display='block'}calc();</script></body></html>
