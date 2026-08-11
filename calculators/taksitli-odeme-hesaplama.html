@@ -1,6 +1,14 @@
 <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Taksitli Ödeme Hesaplama | HesaplaBoz</title><meta name="description" content="Peşinat, toplam fiyat ve taksit sayısından faizsiz taksit tutarını hesapla."><meta name="robots" content="index,follow">
-<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/taksitli-odeme-hesaplama.html"><link rel="stylesheet" href="style.css"></head>
+<title>Taksitli Ödeme Hesaplama | Aylık Taksiti Bul</title><meta name="description" content="Toplam fiyat, peşinat ve taksit sayısından faizsiz aylık taksit tutarını hesapla."><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/taksitli-odeme-hesaplama.html">
+<meta name="theme-color" content="#0b1220">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HesaplaBoz">
+<meta property="og:title" content="Taksitli Ödeme Hesaplama | Aylık Taksiti Bul">
+<meta property="og:description" content="Toplam fiyat, peşinat ve taksit sayısından faizsiz aylık taksit tutarını hesapla.">
+<meta property="og:url" content="https://hesaplaboz.vercel.app/calculators/taksitli-odeme-hesaplama.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="style.css"></head>
 <body><header class="nav"><a class="brand" href="../index.html"><span class="brand-mark">H</span><span>Hesapla<span>Boz</span></span></a><a class="back" href="../index.html">← Tüm hesaplamalar</a></header>
 <main class="wrap"><span class="crumb">Finans</span><h1>Taksitli Ödeme Hesaplama</h1><p>Peşinat sonrası kalan tutarın aylık taksitini bul.</p><div class="calc"><div class="grid"><div><label>Toplam Fiyat (TL)</label><input id="p" type="number" value="120000"></div><div><label>Peşinat (TL)</label><input id="d" type="number" value="20000"></div><div><label>Taksit Sayısı</label><input id="n" type="number" value="10"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Aylık taksit</p><div class="big" id="pay"></div><p>Kalan tutar</p><div class="big" id="rem"></div></div><div class="note">Faiz ve komisyon içermeyen basit taksit hesabıdır.</div></div>
 <section class="seo-copy"><h2>Taksitli Ödeme Hesaplama nasıl hesaplanır?</h2><p>Toplam fiyattan peşinat çıkarılır ve kalan tutar taksit sayısına bölünür.</p></section>
