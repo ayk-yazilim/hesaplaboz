@@ -1,0 +1,2 @@
+function filterTools(q){const x=q.trim().toLowerCase();const cards=[...document.querySelectorAll('.tool-card')];let n=0;cards.forEach(c=>{const show=!x||c.dataset.name.includes(x);c.style.display=show?'flex':'none';if(show)n++});document.getElementById('no-results').hidden=n!==0}
+document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();document.getElementById('search')?.focus()}});
