@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="tr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vade Farkı Hesaplama | HesaplaBoz</title>
+<meta name="description" content="Ana para, aylık oran ve vade ile basit vade farkını hesapla.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/vade-farki-hesaplama.html">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="nav"><a class="brand" href="../index.html"><span class="brand-mark">H</span><span>Hesapla<span>Boz</span></span></a><a class="back" href="../index.html">← Tüm hesaplamalar</a></header>
+<main class="wrap"><span class="crumb">Ticari</span><h1>Vade Farkı Hesaplama</h1><p>Ticari bir tutar için basit aylık vade farkını ve toplam tutarı hesapla.</p>
+<div class="calc"><div class="grid"><div><label>Ana Para (TL)</label><input id="principal" type="number" value="100000"></div><div><label>Aylık Vade Farkı (%)</label><input id="rate" type="number" value="2"></div><div><label>Vade (Ay)</label><input id="months" type="number" value="6" min="0"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Vade farkı</p><div class="big" id="diff"></div><p>Toplam tutar</p><div class="big" id="totalv"></div></div><div class="note">Basit faiz yaklaşımı kullanır: ana para × aylık oran × ay. Sözleşme koşulları farklı olabilir.</div></div>
+<section class="seo-copy"><h2>Vade Farkı Hesaplama nasıl hesaplanır?</h2><p>Basit vade farkında ana para, aylık oran ve ay sayısı kullanılır. Bu araç bileşik faiz uygulamaz. Ticari sözleşmelerde tarafların belirlediği koşullar ayrıca kontrol edilmelidir.</p></section>
+</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}function calc(){const p=+principal.value||0,r=(+rate.value||0)/100,m=+months.value||0,d=p*r*m;diff.textContent=tl(d);totalv.textContent=tl(p+d);result.style.display='block'}calc();</script></body></html>
