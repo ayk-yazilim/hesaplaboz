@@ -7,143 +7,91 @@
 <meta name="description" content="KDV, kredi, yakıt, kâr marjı, iskonto ve daha fazlasını HesaplaBoz ile anında ve ücretsiz hesapla.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://hesaplaboz.vercel.app/">
-<meta property="og:title" content="HesaplaBoz | Anında Hesapla, Ezberleri Boz!">
-<meta property="og:description" content="Hızlı, sade ve ücretsiz hesaplama araçları.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hesaplaboz.vercel.app/">
-<link rel="stylesheet" href="css/style.css?v=2">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"HesaplaBoz","url":"https://hesaplaboz.vercel.app/","description":"Türkiye için ücretsiz hesaplama araçları.","potentialAction":{"@type":"SearchAction","target":"https://hesaplaboz.vercel.app/?q={search_term_string}","query-input":"required name=search_term_string"}}
-</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+:root{--ink:#0b1220;--muted:#667085;--line:#e6ebf2;--blue:#315efb;--bg:#f7f9fc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',Arial,sans-serif}a{text-decoration:none;color:inherit}
+.topline{height:31px;background:#0b1220;color:#cbd5e1;display:flex;align-items:center;justify-content:center;gap:30px;font-size:9px;letter-spacing:1px;text-transform:uppercase}.topline span+span{position:relative}.topline span+span:before{content:"";position:absolute;width:3px;height:3px;border-radius:50%;background:#6680ff;left:-17px;top:50%}
+.nav{height:74px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 max(20px,calc((100% - 1120px)/2));gap:42px;position:sticky;top:0;z-index:50}.brand{display:flex;align-items:center;gap:10px;font-family:'Plus Jakarta Sans';font-weight:800;font-size:19px;letter-spacing:-.8px}.brand-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(145deg,#315efb,#6d82ff);color:white;display:grid;place-items:center;box-shadow:0 8px 22px rgba(49,94,251,.22)}.brand-blue{color:var(--blue)}.navlinks{display:flex;gap:30px;flex:1;color:#667085;font-size:13px}.navlinks a:hover{color:var(--blue)}.navcta{background:#0b1220;color:#fff;padding:11px 15px;border-radius:10px;font-size:12px;font-weight:700}.navcta span{color:#91a5ff;margin-left:7px}
+.hero{position:relative;text-align:center;max-width:1120px;margin:auto;padding:82px 20px 58px;overflow:hidden}.hero:before{content:"";position:absolute;width:700px;height:430px;left:50%;top:-100px;transform:translateX(-50%);background:radial-gradient(circle,rgba(49,94,251,.14),transparent 67%);pointer-events:none}.eyebrow{position:relative;display:inline-flex;align-items:center;gap:8px;border:1px solid #e1e7f1;background:#fff;border-radius:99px;padding:8px 12px;color:var(--blue);font-size:9px;font-weight:800;letter-spacing:1.7px;text-transform:uppercase;box-shadow:0 8px 25px rgba(30,50,90,.05)}.pulse{width:6px;height:6px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px rgba(49,94,251,.1)}
+h1{position:relative;font-family:'Plus Jakarta Sans';font-size:72px;line-height:1.02;letter-spacing:-4.5px;margin:24px 0 17px}.gradient{background:linear-gradient(100deg,#315efb,#6c7dff);-webkit-background-clip:text;background-clip:text;color:transparent}.herotext{position:relative;max-width:650px;margin:0 auto 30px;color:var(--muted);font-size:16px;line-height:1.65}
+.searchbox{position:relative;max-width:730px;height:64px;margin:0 auto;display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #dce3ee;border-radius:15px;padding:0 16px;box-shadow:0 18px 50px rgba(31,49,89,.10)}.searchicon{font-size:24px;color:#98a2b3}.searchbox input{flex:1;border:0;outline:0;background:transparent;font:14px 'DM Sans';color:var(--ink);min-width:0}.searchbox input::placeholder{color:#98a2b3}.searchbox kbd{font:11px 'DM Sans';color:#8b96a8;background:#f5f7fa;border:1px solid #e0e5ec;border-radius:7px;padding:6px 8px}
+.quick{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:14px;font-size:11px;color:#98a2b3}.quick a{background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 11px;color:#667085;font-weight:600}.quick a:hover{border-color:#bac6ff;color:var(--blue)}
+.proof{max-width:620px;margin:38px auto 0;display:flex;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px;box-shadow:0 10px 30px rgba(30,50,90,.04)}.proof>div{flex:1}.proof strong{display:block;font:800 21px 'Plus Jakarta Sans'}.proof small{font-size:9px;color:#8b96a8;text-transform:uppercase;letter-spacing:1px}.proof i{width:1px;height:27px;background:var(--line)}
+.section{max-width:1120px;margin:auto;padding:58px 20px}.sectionhead{display:flex;align-items:end;justify-content:space-between;margin-bottom:23px}.kicker{font-size:9px;letter-spacing:1.8px;font-weight:800;color:var(--blue)}h2{font:800 29px 'Plus Jakarta Sans';letter-spacing:-1.4px;margin:8px 0 0}.all{font-size:12px;color:var(--blue);font-weight:700}
+.featured{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.fcard{min-height:285px;border:1px solid var(--line);border-radius:21px;background:#fff;padding:23px;display:flex;flex-direction:column;box-shadow:0 16px 50px rgba(31,49,89,.07);transition:.2s}.fcard:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(31,49,89,.11)}.fcard.dark{background:#0b1220;color:#fff;border-color:#0b1220}.ftop{display:flex;justify-content:space-between}.tag{font-size:9px;letter-spacing:1.5px;font-weight:800;color:#8b96a8}.dark .tag{color:#8795aa}.ficon{width:47px;height:47px;border-radius:14px;background:#eef2ff;color:var(--blue);display:grid;place-items:center;font-size:20px;font-weight:800;margin-top:27px}.dark .ficon{background:#18223a}.fcard h3{font:800 20px 'Plus Jakarta Sans';letter-spacing:-.7px;margin:15px 0 7px}.fcard p{font-size:12px;line-height:1.6;color:var(--muted);margin:0}.dark p{color:#aab4c5}.flink{margin-top:auto;color:var(--blue);font-size:11px;font-weight:700}.dark .flink{color:#aabaff}
+.tools{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.tool{min-height:102px;background:#fff;border:1px solid var(--line);border-radius:15px;padding:17px;display:flex;align-items:center;gap:15px;transition:.2s}.tool:hover{border-color:#c6d0ff;transform:translateY(-2px);box-shadow:0 12px 30px rgba(31,49,89,.06)}.icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;font-weight:800;flex:0 0 44px}.blue{background:#eef2ff;color:#315efb}.purple{background:#f2edff;color:#7757e8}.green{background:#eaf9f1;color:#1d9b62}.orange{background:#fff3e6;color:#f08b24}.pink{background:#fff0f5;color:#ef5f88}.violet{background:#f4edff;color:#8957db}.teal{background:#e9f9fb;color:#1799a8}.amber{background:#fff5e8;color:#e99228}.rose{background:#fff0f4;color:#e85c82}.cyan{background:#e9f9fb;color:#1799a8}.toolbody{flex:1}.toolbody .tag{display:block}.tool h3{font:800 14px 'Plus Jakarta Sans';margin:5px 0 3px}.tool p{font-size:11px;color:var(--muted);margin:0}.arrow{color:#9aa5b5;font-size:17px}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.cat{display:flex;align-items:center;gap:11px;background:#fff;border:1px solid var(--line);border-radius:15px;padding:15px}.cat .icon{width:38px;height:38px;flex-basis:38px}.catmain{flex:1}.cat b{display:block;font-size:12px}.cat small{display:block;color:#98a2b3;font-size:10px;margin-top:3px}
+.whybox{background:#0b1220;color:#fff;border-radius:22px;padding:45px;display:grid;grid-template-columns:1.1fr 1fr;gap:60px;position:relative;overflow:hidden}.whybox:after{content:"";position:absolute;width:430px;height:430px;right:-190px;top:-180px;border-radius:50%;background:radial-gradient(circle,rgba(77,102,255,.35),transparent 65%)}.whybox h2{font-size:32px}.whybox p{color:#aab4c5;font-size:13px;line-height:1.75;max-width:570px}.points{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;position:relative;z-index:2;align-items:end}.points div{border-left:1px solid #283248;padding-left:13px}.points span{font-size:9px;color:#7f8da4}.points b{display:block;font:700 13px 'Plus Jakarta Sans';margin-top:17px}.points small{color:#aab4c5;font-size:10px}
+.cta{max-width:1080px;margin:0 auto 70px;padding:31px 36px;border:1px solid #dce4ff;border-radius:21px;background:linear-gradient(105deg,#eef2ff,#fff);display:flex;align-items:center;justify-content:space-between}.cta h2{font-size:25px}.cta p{color:var(--muted);font-size:12px;margin:5px 0 0}.ctabtn{background:var(--blue);color:#fff;border-radius:10px;padding:13px 17px;font-size:11px;font-weight:700;box-shadow:0 10px 25px rgba(49,94,251,.22)}
+footer{max-width:1120px;margin:auto;border-top:1px solid var(--line);padding:28px 20px 38px;display:flex;justify-content:space-between;align-items:center;color:#8b96a8;font-size:10px}
+.empty{padding:45px;text-align:center;background:#fff;border:1px solid var(--line);border-radius:16px}.empty strong{display:block;font-family:'Plus Jakarta Sans';margin-bottom:4px}.empty span{color:var(--muted);font-size:12px}
+@media(max-width:800px){.nav{gap:18px}.navlinks{display:none}.navcta{margin-left:auto}.hero{padding-top:60px}h1{font-size:52px}.featured,.cats{grid-template-columns:1fr 1fr}.whybox{grid-template-columns:1fr;gap:20px}.section{padding-left:16px;padding-right:16px}}
+@media(max-width:560px){.topline{gap:13px;font-size:7px}.nav{height:66px;padding:0 14px}.navcta{font-size:10px;padding:9px 10px}.hero{padding:45px 14px 38px}.hero h1{font-size:43px;letter-spacing:-3px}.herotext{font-size:14px}.searchbox{height:59px}.searchbox kbd{display:none}.proof{margin-top:28px}.proof strong{font-size:18px}.sectionhead{align-items:start}.section h2{font-size:24px}.featured,.tools,.cats{grid-template-columns:1fr}.fcard{min-height:245px}.whybox{padding:30px 22px}.whybox h2{font-size:27px}.points{grid-template-columns:1fr 1fr 1fr;gap:8px}.cta{margin:0 14px 45px;padding:25px;display:block}.ctabtn{display:inline-block;margin-top:18px}footer{margin:0 14px;display:block}footer .brand{margin-bottom:10px}}
+</style>
 </head>
 <body>
 <div class="topline"><span>Hızlı hesapla.</span><span>Doğru karar ver.</span><span>Ücretsiz kullan.</span></div>
-
 <header class="nav">
-  <a class="brand" href="index.html"><span class="brand-mark">H</span><span>Hesapla<span>Boz</span></span></a>
-  <nav>
-    <a href="#hesaplamalar">Hesaplamalar</a>
-    <a href="#kategoriler">Kategoriler</a>
-    <a href="#neden">Neden HesaplaBoz?</a>
-  </nav>
-  <a class="nav-cta" href="#hesaplamalar">Hesaplamaya Başla <span>↗</span></a>
+<a class="brand" href="index.html"><span class="brand-mark">H</span><span>Hesapla<span class="brand-blue">Boz</span></span></a>
+<nav class="navlinks"><a href="#hesaplamalar">Hesaplamalar</a><a href="#kategoriler">Kategoriler</a><a href="#neden">Neden HesaplaBoz?</a></nav>
+<a class="navcta" href="#hesaplamalar">Hesaplamaya Başla <span>↗</span></a>
 </header>
-
 <main>
 <section class="hero">
-  <div class="hero-glow"></div>
-  <div class="eyebrow"><span class="pulse"></span> Ücretsiz hesaplama araçları</div>
-  <h1>Hesapla.<br><span>Ezberleri boz.</span></h1>
-  <p class="hero-copy">Finans, araç, muhasebe, işletme ve günlük hayat için ihtiyacın olan hesabı saniyeler içinde yap.</p>
-
-  <div class="hero-search">
-    <span class="search-icon">⌕</span>
-    <input id="search" autocomplete="off" placeholder="Ne hesaplamak istiyorsun? Örn. KDV, kredi, yakıt..." oninput="filterTools(this.value)">
-    <kbd>⌘ K</kbd>
-  </div>
-  <div class="quick-links">
-    <span>Popüler:</span>
-    <a href="calculators/kdv.html">KDV</a>
-    <a href="calculators/kredi.html">Kredi</a>
-    <a href="calculators/yakit.html">Yakıt</a>
-    <a href="calculators/kar-marji.html">Kâr Marjı</a>
-    <a href="calculators/iskonto.html">İskonto</a>
-  </div>
-
-  <div class="hero-proof">
-    <div><strong>10</strong><span>ücretsiz araç</span></div>
-    <i></i>
-    <div><strong>5</strong><span>kategori</span></div>
-    <i></i>
-    <div><strong>∞</strong><span>hesaplama</span></div>
-  </div>
+<div class="eyebrow"><span class="pulse"></span> Ücretsiz hesaplama araçları</div>
+<h1>Hesapla.<br><span class="gradient">Ezberleri boz.</span></h1>
+<p class="herotext">Finans, araç, muhasebe, işletme ve günlük hayat için ihtiyacın olan hesabı saniyeler içinde yap.</p>
+<div class="searchbox"><span class="searchicon">⌕</span><input id="search" placeholder="Ne hesaplamak istiyorsun? Örn. KDV, kredi, yakıt..." oninput="filterTools(this.value)"><kbd>⌘ K</kbd></div>
+<div class="quick"><span>Popüler:</span><a href="calculators/kdv.html">KDV</a><a href="calculators/kredi.html">Kredi</a><a href="calculators/yakit.html">Yakıt</a><a href="calculators/kar-marji.html">Kâr Marjı</a><a href="calculators/iskonto.html">İskonto</a></div>
+<div class="proof"><div><strong>10</strong><small>ücretsiz araç</small></div><i></i><div><strong>5</strong><small>kategori</small></div><i></i><div><strong>∞</strong><small>hesaplama</small></div></div>
 </section>
 
-<section id="populer" class="section popular">
-  <div class="section-head">
-    <div><span class="section-kicker">EN ÇOK KULLANILANLAR</span><h2>Bugün en çok ihtiyacın olan hesaplar.</h2></div>
-    <a href="#hesaplamalar" class="text-link">Tüm araçlar <span>→</span></a>
-  </div>
-  <div class="featured-grid">
-    <a class="featured-card" href="calculators/kdv.html">
-      <div class="card-top"><span class="mini-tag">MUHASEBE</span><span class="card-arrow">↗</span></div>
-      <div class="featured-icon">%</div><h3>KDV Hesaplama</h3><p>KDV dahil, hariç tutarı ve KDV tutarını tek ekranda hesapla.</p><span class="card-link">Hemen hesapla <b>→</b></span>
-    </a>
-    <a class="featured-card dark" href="calculators/kredi.html">
-      <div class="card-top"><span class="mini-tag">FİNANS</span><span class="card-arrow">↗</span></div>
-      <div class="featured-icon">₺</div><h3>Kredi Hesaplama</h3><p>Aylık taksitini ve toplam geri ödemeni saniyeler içinde gör.</p><span class="card-link">Hemen hesapla <b>→</b></span>
-    </a>
-    <a class="featured-card" href="calculators/yakit.html">
-      <div class="card-top"><span class="mini-tag">ARAÇ</span><span class="card-arrow">↗</span></div>
-      <div class="featured-icon">⌁</div><h3>Yakıt Maliyeti</h3><p>Km başına ve yıllık yakıt maliyetini kolayca hesapla.</p><span class="card-link">Hemen hesapla <b>→</b></span>
-    </a>
-  </div>
+<section class="section">
+<div class="sectionhead"><div><span class="kicker">EN ÇOK KULLANILANLAR</span><h2>Bugün en çok ihtiyacın olan hesaplar.</h2></div><a class="all" href="#hesaplamalar">Tüm araçlar →</a></div>
+<div class="featured">
+<a class="fcard" href="calculators/kdv.html"><div class="ftop"><span class="tag">MUHASEBE</span><span class="arrow">↗</span></div><div class="ficon">%</div><h3>KDV Hesaplama</h3><p>KDV dahil, hariç tutarı ve KDV tutarını tek ekranda hesapla.</p><span class="flink">Hemen hesapla →</span></a>
+<a class="fcard dark" href="calculators/kredi.html"><div class="ftop"><span class="tag">FİNANS</span><span class="arrow">↗</span></div><div class="ficon">₺</div><h3>Kredi Hesaplama</h3><p>Aylık taksitini ve toplam geri ödemeni saniyeler içinde gör.</p><span class="flink">Hemen hesapla →</span></a>
+<a class="fcard" href="calculators/yakit.html"><div class="ftop"><span class="tag">ARAÇ</span><span class="arrow">↗</span></div><div class="ficon">⌁</div><h3>Yakıt Maliyeti</h3><p>Km başına ve yıllık yakıt maliyetini kolayca hesapla.</p><span class="flink">Hemen hesapla →</span></a>
+</div>
 </section>
 
-<section id="hesaplamalar" class="section tools-section">
-  <div class="section-head">
-    <div><span class="section-kicker">HESAPLAMA KÜTÜPHANESİ</span><h2>İhtiyacın olan araç burada.</h2></div>
-  </div>
-  <div id="tools" class="tool-grid">
-    <a class="tool-card" data-name="KDV hesaplama kdv dahil hariç muhasebe" href="calculators/kdv.html"><div class="tool-icon blue">%</div><div><span class="tag">MUHASEBE</span><h3>KDV Hesaplama</h3><p>KDV dahil ve hariç tutarı hesapla.</p></div><span class="arrow">↗</span></a>
-    <a class="tool-card" data-name="Kredi taksit faiz finans" href="calculators/kredi.html"><div class="tool-icon purple">₺</div><div><span class="tag">FİNANS</span><h3>Kredi Hesaplama</h3><p>Aylık taksit ve toplam geri ödeme.</p></div><span class="arrow">↗</span></a>
-    <a class="tool-card" data-name="Yakıt benzin lpg dizel araç maliyeti" href="calculators/yakit.html"><div class="tool-icon green">⌁</div><div><span class="tag">ARAÇ</span><h3>Yakıt Maliyeti</h3><p>Km ve yıllık yakıt giderini bul.</p></div><span class="arrow">↗</span></a>
-    <a class="tool-card" data-name="Kar marjı karlılık işletme" href="calculators/kar-marji.html"><div class="tool-icon orange">↗</div><div><span class="tag">İŞLETME</span><h3>Kâr Marjı</h3><p>Satış fiyatından gerçek kârlılığını bul.</p></div><span class="arrow">↗</span></a>
-    <a class="tool-card" data-name="İskonto indirim ticari" href="calculators/iskonto.html"><div class="tool-icon pink">−%</div><div><span class="tag">TİCARİ</span><h3>İskonto Hesaplama</h3><p>İndirim sonrası fiyatı ve tutarı bul.</p></div><span class="arrow">↗</span></a>
-    <a class="tool-card" data-name="Yüzde hesaplama oran artış azalış" href="calculators/yuzde-hesaplama.html"><div class="tool-icon violet">%</div><div><span class="tag">GÜNLÜK</span><h3>Yüzde Hesaplama</h3><p>Yüzde tutarını anında hesapla.</p></div><span class="arrow">↗</span></a>
-    <a class="tool-card" data-name="Birim fiyat adet kilogram litre" href="calculators/birim-fiyat.html"><div class="tool-icon teal">₺</div><div><span class="tag">İŞLETME</span><h3>Birim Fiyat</h3><p>Adet, kg veya litre başına fiyat.</p></div><span class="arrow">↗</span></a>
-    <a class="tool-card" data-name="Başabaş noktası sabit gider maliyet" href="calculators/basabas-noktasi.html"><div class="tool-icon amber">≈</div><div><span class="tag">İŞLETME</span><h3>Başabaş Noktası</h3><p>Zarar etmeme satış adedini bul.</p></div><span class="arrow">↗</span></a>
-    <a class="tool-card" data-name="Vade farkı ticari hesaplama" href="calculators/vade-farki-hesaplama.html"><div class="tool-icon rose">↗</div><div><span class="tag">TİCARİ</span><h3>Vade Farkı</h3><p>Ana para, oran ve vadeden hesapla.</p></div><span class="arrow">↗</span></a>
-    <a class="tool-card" data-name="Yüzde değişim artış azalış" href="calculators/oran-degisimi.html"><div class="tool-icon cyan">Δ%</div><div><span class="tag">GÜNLÜK</span><h3>Yüzde Değişim</h3><p>Artış veya azalış oranını bul.</p></div><span class="arrow">↗</span></a>
-  </div>
-  <div id="no-results" class="no-results" hidden><strong>Aradığını bulamadık.</strong><span>Başka bir kelime deneyelim.</span></div>
+<section id="hesaplamalar" class="section">
+<div class="sectionhead"><div><span class="kicker">HESAPLAMA KÜTÜPHANESİ</span><h2>İhtiyacın olan araç burada.</h2></div></div>
+<div id="tools" class="tools">
+<a class="tool" data-name="kdv vergi muhasebe" href="calculators/kdv.html"><span class="icon blue">%</span><div class="toolbody"><span class="tag">MUHASEBE</span><h3>KDV Hesaplama</h3><p>KDV dahil ve hariç tutarı hesapla.</p></div><span class="arrow">↗</span></a>
+<a class="tool" data-name="kredi faiz taksit finans" href="calculators/kredi.html"><span class="icon purple">₺</span><div class="toolbody"><span class="tag">FİNANS</span><h3>Kredi Hesaplama</h3><p>Aylık taksit ve toplam geri ödeme.</p></div><span class="arrow">↗</span></a>
+<a class="tool" data-name="yakıt benzin lpg dizel araç" href="calculators/yakit.html"><span class="icon green">⌁</span><div class="toolbody"><span class="tag">ARAÇ</span><h3>Yakıt Maliyeti</h3><p>Km ve yıllık yakıt giderini bul.</p></div><span class="arrow">↗</span></a>
+<a class="tool" data-name="kar marjı karlılık işletme" href="calculators/kar-marji.html"><span class="icon orange">↗</span><div class="toolbody"><span class="tag">İŞLETME</span><h3>Kâr Marjı</h3><p>Satış fiyatından kârlılığını bul.</p></div><span class="arrow">↗</span></a>
+<a class="tool" data-name="iskonto indirim ticari" href="calculators/iskonto.html"><span class="icon pink">−%</span><div class="toolbody"><span class="tag">TİCARİ</span><h3>İskonto Hesaplama</h3><p>İndirim sonrası fiyatı ve tutarı bul.</p></div><span class="arrow">↗</span></a>
+<a class="tool" data-name="yüzde oran artış azalış" href="calculators/yuzde-hesaplama.html"><span class="icon violet">%</span><div class="toolbody"><span class="tag">GÜNLÜK</span><h3>Yüzde Hesaplama</h3><p>Yüzde tutarını anında hesapla.</p></div><span class="arrow">↗</span></a>
+<a class="tool" data-name="birim fiyat adet kilogram litre" href="calculators/birim-fiyat.html"><span class="icon teal">₺</span><div class="toolbody"><span class="tag">İŞLETME</span><h3>Birim Fiyat</h3><p>Adet, kg veya litre başına fiyat.</p></div><span class="arrow">↗</span></a>
+<a class="tool" data-name="başabaş noktası sabit gider maliyet" href="calculators/basabas-noktasi.html"><span class="icon amber">≈</span><div class="toolbody"><span class="tag">İŞLETME</span><h3>Başabaş Noktası</h3><p>Zarar etmeme satış adedini bul.</p></div><span class="arrow">↗</span></a>
+<a class="tool" data-name="vade farkı ticari" href="calculators/vade-farki-hesaplama.html"><span class="icon rose">↗</span><div class="toolbody"><span class="tag">TİCARİ</span><h3>Vade Farkı</h3><p>Ana para, oran ve vadeden hesapla.</p></div><span class="arrow">↗</span></a>
+<a class="tool" data-name="yüzde değişim artış azalış" href="calculators/oran-degisimi.html"><span class="icon cyan">Δ%</span><div class="toolbody"><span class="tag">GÜNLÜK</span><h3>Yüzde Değişim</h3><p>Artış veya azalış oranını bul.</p></div><span class="arrow">↗</span></a>
+</div>
+<div id="empty" class="empty" hidden><strong>Aradığını bulamadık.</strong><span>Başka bir kelime deneyelim.</span></div>
 </section>
 
-<section id="kategoriler" class="section categories">
-  <div class="section-head"><div><span class="section-kicker">KATEGORİLER</span><h2>Hesabın hangi tarafta?</h2></div></div>
-  <div class="category-grid">
-    <a href="calculators/kdv.html" class="category-card"><span class="cat-icon blue">₺</span><div><b>Finans & Muhasebe</b><span>KDV, kredi, iskonto</span></div><span>→</span></a>
-    <a href="calculators/yakit.html" class="category-card"><span class="cat-icon green">⌁</span><div><b>Araç</b><span>Yakıt ve maliyet</span></div><span>→</span></a>
-    <a href="calculators/kar-marji.html" class="category-card"><span class="cat-icon orange">◈</span><div><b>İşletme</b><span>Kârlılık ve maliyet</span></div><span>→</span></a>
-    <a href="calculators/yuzde-hesaplama.html" class="category-card"><span class="cat-icon purple">%</span><div><b>Günlük</b><span>Yüzde ve değişim</span></div><span>→</span></a>
-  </div>
+<section id="kategoriler" class="section">
+<div class="sectionhead"><div><span class="kicker">KATEGORİLER</span><h2>Hesabın hangi tarafta?</h2></div></div>
+<div class="cats">
+<a class="cat" href="calculators/kdv.html"><span class="icon blue">₺</span><div class="catmain"><b>Finans & Muhasebe</b><small>KDV, kredi, iskonto</small></div><span>→</span></a>
+<a class="cat" href="calculators/yakit.html"><span class="icon green">⌁</span><div class="catmain"><b>Araç</b><small>Yakıt ve maliyet</small></div><span>→</span></a>
+<a class="cat" href="calculators/kar-marji.html"><span class="icon orange">◈</span><div class="catmain"><b>İşletme</b><small>Kârlılık ve maliyet</small></div><span>→</span></a>
+<a class="cat" href="calculators/yuzde-hesaplama.html"><span class="icon purple">%</span><div class="catmain"><b>Günlük</b><small>Yüzde ve değişim</small></div><span>→</span></a>
+</div>
 </section>
 
-<section id="neden" class="section why">
-  <div class="why-panel">
-    <div><span class="section-kicker">HESAPLABOZ</span><h2>Hesap makinesinden fazlası.</h2><p>Sonucu görmek yetmez. Ne hesapladığını anlayabilmen için her araçta sade açıklamalar, net sonuçlar ve ilgili hesaplamalar sunuyoruz.</p></div>
-    <div class="why-points">
-      <div><span>01</span><b>Hızlı</b><p>Gereksiz adım yok.</p></div>
-      <div><span>02</span><b>Sade</b><p>Sonuçlar tek bakışta.</p></div>
-      <div><span>03</span><b>Ücretsiz</b><p>Temel araçlar herkese açık.</p></div>
-    </div>
-  </div>
+<section id="neden" class="section">
+<div class="whybox"><div><span class="kicker">HESAPLABOZ</span><h2>Hesap makinesinden fazlası.</h2><p>Sonucu görmek yetmez. Her araçta sade açıklamalar, net sonuçlar ve ilgili hesaplamalar sunuyoruz.</p></div><div class="points"><div><span>01</span><b>Hızlı</b><small>Gereksiz adım yok.</small></div><div><span>02</span><b>Sade</b><small>Sonuçlar tek bakışta.</small></div><div><span>03</span><b>Ücretsiz</b><small>Temel araçlar herkese açık.</small></div></div></div>
 </section>
 
-<section class="cta">
-  <div><span class="section-kicker">HAZIRSAN</span><h2>Bir hesabın mı var?</h2><p>Hesapla. Sonucu gör. Ezberleri boz.</p></div>
-  <a href="#hesaplamalar">Hesaplamalara git <span>↗</span></a>
-</section>
+<section class="cta"><div><span class="kicker">HAZIRSAN</span><h2>Bir hesabın mı var?</h2><p>Hesapla. Sonucu gör. Ezberleri boz.</p></div><a class="ctabtn" href="#hesaplamalar">Hesaplamalara git ↗</a></section>
 </main>
-
-<footer>
-  <a class="brand" href="index.html"><span class="brand-mark">H</span><span>Hesapla<span>Boz</span></span></a>
-  <span>Anında Hesapla, Ezberleri Boz!</span>
-</footer>
-
+<footer><a class="brand" href="index.html"><span class="brand-mark">H</span><span>Hesapla<span class="brand-blue">Boz</span></span></a><span>Anında Hesapla, Ezberleri Boz!</span></footer>
 <script>
-function filterTools(q){
-  q=(q||'').toLocaleLowerCase('tr-TR').trim();
-  let count=0;
-  document.querySelectorAll('.tool-card').forEach(c=>{
-    const ok=!q || (c.dataset.name||'').toLocaleLowerCase('tr-TR').includes(q);
-    c.style.display=ok?'flex':'none'; if(ok) count++;
-  });
-  document.getElementById('no-results').hidden=count!==0;
-}
-document.addEventListener('keydown',e=>{
-  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();document.getElementById('search').focus();}
-});
+function filterTools(q){q=(q||'').toLocaleLowerCase('tr-TR').trim();let n=0;document.querySelectorAll('.tool').forEach(x=>{let ok=!q||(x.dataset.name||'').toLocaleLowerCase('tr-TR').includes(q);x.style.display=ok?'flex':'none';if(ok)n++});document.getElementById('empty').hidden=n!==0}
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();document.getElementById('search').focus()}})
 </script>
-</body>
-</html>
+</body></html>
