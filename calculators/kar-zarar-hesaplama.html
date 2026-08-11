@@ -5,4 +5,39 @@
 <main class="wrap"><span class="crumb">İşletme</span><h1>Kâr Zarar Hesaplama</h1><p>Maliyetini ve satış fiyatını girerek işlem başına kârını veya zararını gör.</p><div class="calc"><div class="grid"><div><label>Maliyet (TL)</label><input id="c" type="number" value="800"></div><div><label>Satış Fiyatı (TL)</label><input id="s" type="number" value="1000"></div><div><label>Adet</label><input id="q" type="number" value="10"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Birim kâr / zarar</p><div class="big" id="u"></div><p>Toplam</p><div class="big" id="t"></div><p>Kâr marjı</p><div class="big" id="m"></div></div><div class="note">Vergiler ve işletmenin diğer giderleri ayrıca değerlendirilmelidir.</div></div>
 <section class="seo-copy"><h2>Kâr Zarar Hesaplama nasıl hesaplanır?</h2><p>Kâr veya zarar satış fiyatından maliyetin çıkarılmasıyla bulunur. Kâr marjı kârın satış fiyatına oranıdır.</p></section>
 <section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}function calc(){let c=+c1.value||0,s=+s1.value||0,q=+q1.value||0,x=s-c;u.textContent=tl(x);t.textContent=tl(x*q);m.textContent=s?(x/s*100).toLocaleString('tr-TR',{maximumFractionDigits:2})+' %':'Tanımsız';result.style.display='block'}const c1=document.getElementById('c'),s1=document.getElementById('s');calc();</script></body></html>
+</main><script>
+function tl(n){
+  return n.toLocaleString('tr-TR',{
+    style:'currency',
+    currency:'TRY',
+    maximumFractionDigits:2
+  });
+}
+
+const costInput = document.getElementById('c');
+const saleInput = document.getElementById('s');
+const qtyInput = document.getElementById('q');
+
+const unitOutput = document.getElementById('u');
+const totalOutput = document.getElementById('t');
+const marginOutput = document.getElementById('m');
+const resultBox = document.getElementById('result');
+
+function calc(){
+  const cost = Number(costInput.value) || 0;
+  const sale = Number(saleInput.value) || 0;
+  const qty = Number(qtyInput.value) || 0;
+
+  const unitProfit = sale - cost;
+  const totalProfit = unitProfit * qty;
+  const margin = sale !== 0 ? (unitProfit / sale) * 100 : 0;
+
+  unitOutput.textContent = tl(unitProfit);
+  totalOutput.textContent = tl(totalProfit);
+  marginOutput.textContent = margin.toLocaleString('tr-TR',{
+    maximumFractionDigits:2
+  }) + ' %';
+
+  resultBox.style.display = 'block';
+}
+</script></body></html>
