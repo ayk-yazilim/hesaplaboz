@@ -5,4 +5,19 @@
 <main class="wrap"><span class="crumb">İşletme</span><h1>Markup Hesaplama</h1><p>Maliyeti ve markup oranını girerek hedef satış fiyatını bul.</p><div class="calc"><div class="grid"><div><label>Maliyet (TL)</label><input id="c" type="number" value="800"></div><div><label>Markup (%)</label><input id="r" type="number" value="25"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Markup tutarı</p><div class="big" id="m"></div><p>Satış fiyatı</p><div class="big" id="s"></div></div><div class="note">Markup maliyet üzerine eklenen orandır; kâr marjıyla aynı kavram değildir.</div></div>
 <section class="seo-copy"><h2>Markup Hesaplama nasıl hesaplanır?</h2><p>Markup maliyet üzerinden satış fiyatına eklenen yüzdesel paydır.</p></section>
 <section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}function calc(){let c=+c1.value||0,r=(+r1.value||0)/100,x=c*r;m.textContent=tl(x);s.textContent=tl(c+x);result.style.display='block'}const c1=document.getElementById('c');calc();</script></body></html>
+</main><script>
+function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}
+const costInput=document.getElementById('c');
+const rateInput=document.getElementById('r');
+const markupOutput=document.getElementById('m');
+const saleOutput=document.getElementById('s');
+const resultBox=document.getElementById('result');
+function calc(){
+  const cost=Number(costInput.value)||0;
+  const rate=(Number(rateInput.value)||0)/100;
+  const markup=cost*rate;
+  markupOutput.textContent=tl(markup);
+  saleOutput.textContent=tl(cost+markup);
+  resultBox.style.display='block';
+}
+</script></body></html>
