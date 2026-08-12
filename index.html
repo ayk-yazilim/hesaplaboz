@@ -29,7 +29,7 @@ footer{max-width:1120px;margin:auto;border-top:1px solid var(--line);padding:28p
 @media(max-width:800px){.nav{gap:18px}.navlinks{display:none}.navcta{margin-left:auto}.hero{padding-top:60px}h1{font-size:52px}.featured,.cats{grid-template-columns:1fr 1fr}.whybox{grid-template-columns:1fr;gap:20px}.section{padding-left:16px;padding-right:16px}}
 @media(max-width:560px){.topline{gap:13px;font-size:7px}.nav{height:66px;padding:0 14px}.navcta{font-size:10px;padding:9px 10px}.hero{padding:45px 14px 38px}.hero h1{font-size:43px;letter-spacing:-3px}.herotext{font-size:14px}.searchbox{height:59px}.searchbox kbd{display:none}.proof{margin-top:28px}.proof strong{font-size:18px}.sectionhead{align-items:start}.section h2{font-size:24px}.featured,.tools,.cats{grid-template-columns:1fr}.fcard{min-height:245px}.whybox{padding:30px 22px}.whybox h2{font-size:27px}.points{grid-template-columns:1fr 1fr 1fr;gap:8px}.cta{margin:0 14px 45px;padding:25px;display:block}.ctabtn{display:inline-block;margin-top:18px}footer{margin:0 14px;display:block}footer .brand{margin-bottom:10px}}
 </style>
-</head>
+<style>.ayk-footer{display:block;margin-top:24px;color:#7b8da5;font-size:12px}</style></head>
 <body>
 <div class="topline"><span>Hızlı hesapla.</span><span>Doğru karar ver.</span><span>Ücretsiz kullan.</span></div>
 <header class="nav">
@@ -107,20 +107,11 @@ footer{max-width:1120px;margin:auto;border-top:1px solid var(--line);padding:28p
 
 <section class="cta"><div><span class="kicker">HAZIRSAN</span><h2>Bir hesabın mı var?</h2><p>Hesapla. Sonucu gör. Ezberleri boz.</p></div><a class="ctabtn" href="#hesaplamalar">Hesaplamalara git ↗</a></section>
 </main>
-<footer><a class="brand" href="index.html"><span class="brand-mark">H</span><span>Hesapla<span class="brand-blue">Boz</span></span></a><span>Anında Hesapla, Ezberleri Boz!</span></footer>
+<footer><a class="brand" href="index.html"><span class="brand-mark">H</span><span>Hesapla<span class="brand-blue">Boz</span></span></a><span>Anında Hesapla, Ezberleri Boz!</span><small class="ayk-footer">AYK Yazılım © 2026</small></footer>
 <script>
 function normalizeSearch(s){return (s||'').toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ı/g,'i').replace(/[^a-z0-9çğıöşü\s]/gi,' ').replace(/\s+/g,' ').trim()}
 function filterTools(q){const query=normalizeSearch(q),words=query?query.split(' '):[];let n=0;document.querySelectorAll('.tool').forEach(x=>{const text=normalizeSearch((x.dataset.name||'')+' '+x.innerText);const ok=!query||words.every(w=>text.includes(w));x.style.display=ok?'flex':'none';if(ok)n++});document.getElementById('empty').hidden=n!==0}
 document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();document.getElementById('search').focus()}})
 </script>
-
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <span>AYK Yazılım © 2026</span>
-  </div>
-</footer>
-
-.site-footer{margin-top:80px;border-top:1px solid #e6eaf0;background:#fff}
-.site-footer-inner{max-width:1120px;margin:auto;padding:28px 24px;text-align:center;color:#7b8da5;font-size:13px}
 
 </body></html>
