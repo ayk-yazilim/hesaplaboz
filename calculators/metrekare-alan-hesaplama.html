@@ -1,19 +1,9 @@
 <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Metrekare Hesaplama | Alanı m² Olarak Bul</title><meta name="description" content="Uzunluk ve genişliği girerek dikdörtgen alanını metrekare cinsinden hesapla."><meta name="robots" content="index,follow">
-<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/metrekare-alan-hesaplama.html">
-<meta name="theme-color" content="#0b1220">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="HesaplaBoz">
-<meta property="og:title" content="Metrekare Hesaplama | Alanı m² Olarak Bul">
-<meta property="og:description" content="Uzunluk ve genişliği girerek dikdörtgen alanını metrekare cinsinden hesapla.">
-<meta property="og:url" content="https://hesaplaboz.vercel.app/calculators/metrekare-alan-hesaplama.html">
-<meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="style.css"></head>
+<title>Metrekare Alan Hesaplama | HesaplaBoz</title><meta name="description" content="Uzunluk ve genişlik bilgilerini kullanarak dikdörtgen alanını metrekare cinsinden hesapla."><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/metrekare-alan-hesaplama.html"><link rel="stylesheet" href="style.css"></head>
 <body><header class="nav"><a class="brand" href="../index.html"><span class="brand-mark">H</span><span>Hesapla<span>Boz</span></span></a><a class="back" href="../index.html">← Tüm hesaplamalar</a></header>
 <main class="wrap"><span class="crumb">İnşaat & Ev</span><h1>Metrekare Alan Hesaplama</h1><p>Oda, zemin veya yüzey alanını hızlıca bul.</p><div class="calc"><div class="grid"><div><label>Uzunluk (m)</label><input id="l" type="number" value="5"></div><div><label>Genişlik (m)</label><input id="w" type="number" value="4"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Alan</p><div class="big" id="a"></div></div><div class="note">Dikdörtgen alanı uzunluk × genişliktir.</div></div>
-<section class="seo-copy"><h2>Metrekare Alan Hesaplama nasıl hesaplanır?</h2><p>Dikdörtgen bir yüzeyin alanı uzunluk ile genişliğin çarpılmasıyla bulunur.</p></section>
-<section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>const lengthInput=document.getElementById('l'), widthInput=document.getElementById('w');
+<section class="seo-copy"><h2>Metrekare Alan Nasıl Hesaplanır?</h2><p>Dikdörtgen alanı uzunluk ile genişliğin çarpılmasıyla bulunur. Ölçüleri metreye dönüştürmek sonucu doğru birimle verir.</p><h2>Sık Sorulan Sorular</h2><h3>Metrekare nasıl hesaplanır?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Santimetre ölçüleri metrekareye nasıl çevrilir?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Alan hesabında hangi ölçüler kullanılır?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><div class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="boya-miktari-hesaplama.html">Boya Miktari Hesaplama</a><a href="maliyet-hesaplama.html">Maliyet Hesaplama</a><a href="birim-fiyat.html">Birim Fiyat</a></div></div></section></main><script>const lengthInput=document.getElementById('l'), widthInput=document.getElementById('w');
 const areaOutput=document.getElementById('a'), resultBox=document.getElementById('result');
 function calc(){
  const length=Number(lengthInput.value)||0, width=Number(widthInput.value)||0;

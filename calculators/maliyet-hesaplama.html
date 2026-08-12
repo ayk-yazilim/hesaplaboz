@@ -1,19 +1,9 @@
 <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Toplam Maliyet Hesaplama | Ücretsiz</title><meta name="description" content="Sabit, değişken ve diğer giderleri toplayarak toplam maliyeti hesapla."><meta name="robots" content="index,follow">
-<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/maliyet-hesaplama.html">
-<meta name="theme-color" content="#0b1220">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="HesaplaBoz">
-<meta property="og:title" content="Toplam Maliyet Hesaplama | Ücretsiz">
-<meta property="og:description" content="Sabit, değişken ve diğer giderleri toplayarak toplam maliyeti hesapla.">
-<meta property="og:url" content="https://hesaplaboz.vercel.app/calculators/maliyet-hesaplama.html">
-<meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="style.css"></head>
+<title>Maliyet Hesaplama | HesaplaBoz</title><meta name="description" content="Sabit ve değişken giderleri bir araya getirerek toplam maliyeti hesapla."><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/maliyet-hesaplama.html"><link rel="stylesheet" href="style.css"></head>
 <body><header class="nav"><a class="brand" href="../index.html"><span class="brand-mark">H</span><span>Hesapla<span>Boz</span></span></a><a class="back" href="../index.html">← Tüm hesaplamalar</a></header>
 <main class="wrap"><span class="crumb">İşletme</span><h1>Toplam Maliyet Hesaplama</h1><p>Bir iş veya ürün için maliyet kalemlerini tek yerde topla.</p><div class="calc"><div class="grid"><div><label>Sabit Gider (TL)</label><input id="a" type="number" value="50000"></div><div><label>Değişken Gider (TL)</label><input id="b" type="number" value="30000"></div><div><label>Diğer Gider (TL)</label><input id="c" type="number" value="5000"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Toplam maliyet</p><div class="big" id="t"></div></div><div class="note">Bu araç verdiğin maliyet kalemlerini toplar.</div></div>
-<section class="seo-copy"><h2>Toplam Maliyet Hesaplama nasıl hesaplanır?</h2><p>Toplam maliyet, ilgili iş veya döneme ait maliyet kalemlerinin toplamıdır.</p></section>
-<section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}
+<section class="seo-copy"><h2>Toplam Maliyet Nasıl Hesaplanır?</h2><p>Toplam maliyet, hesaplanan dönem içindeki sabit ve değişken giderlerin toplamıdır. Birim maliyet için toplam maliyet üretim veya satış miktarına bölünebilir.</p><h2>Sık Sorulan Sorular</h2><h3>Sabit maliyet nedir?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Değişken maliyet nedir?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Birim maliyet nasıl bulunur?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><div class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="kar-zarar-hesaplama.html">Kar Zarar Hesaplama</a><a href="basabas-noktasi.html">Basabas Noktasi</a><a href="kar-marji.html">Kar Marji</a></div></div></section></main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}
 const fixedInput=document.getElementById('a'), variableInput=document.getElementById('b'), otherInput=document.getElementById('c');
 const totalOutput=document.getElementById('t'), resultBox=document.getElementById('result');
 function calc(){

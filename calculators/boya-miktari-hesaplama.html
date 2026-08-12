@@ -1,19 +1,9 @@
 <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Boya Miktarı Hesaplama | Kaç Litre Boya Gerekir?</title><meta name="description" content="Alan, boya verimi ve kat sayısını girerek yaklaşık boya ihtiyacını hesapla."><meta name="robots" content="index,follow">
-<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/boya-miktari-hesaplama.html">
-<meta name="theme-color" content="#0b1220">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="HesaplaBoz">
-<meta property="og:title" content="Boya Miktarı Hesaplama | Kaç Litre Boya Gerekir?">
-<meta property="og:description" content="Alan, boya verimi ve kat sayısını girerek yaklaşık boya ihtiyacını hesapla.">
-<meta property="og:url" content="https://hesaplaboz.vercel.app/calculators/boya-miktari-hesaplama.html">
-<meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="style.css"></head>
+<title>Boya Miktarı Hesaplama | HesaplaBoz</title><meta name="description" content="Duvar alanı ve kat sayısı üzerinden yaklaşık boya ihtiyacını hesapla."><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/boya-miktari-hesaplama.html"><link rel="stylesheet" href="style.css"></head>
 <body><header class="nav"><a class="brand" href="../index.html"><span class="brand-mark">H</span><span>Hesapla<span>Boz</span></span></a><a class="back" href="../index.html">← Tüm hesaplamalar</a></header>
 <main class="wrap"><span class="crumb">İnşaat & Ev</span><h1>Boya Miktarı Hesaplama</h1><p>Boyanacak alan için yaklaşık litre ihtiyacını bul.</p><div class="calc"><div class="grid"><div><label>Alan (m²)</label><input id="a" type="number" value="60"></div><div><label>1 Litre Verimi (m²)</label><input id="c" type="number" value="10"></div><div><label>Kat Sayısı</label><input id="n" type="number" value="2"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Yaklaşık boya</p><div class="big" id="l"></div></div><div class="note">Üretici verimi ve yüzey koşulları gerçek tüketimi değiştirebilir.</div></div>
-<section class="seo-copy"><h2>Boya Miktarı Hesaplama nasıl hesaplanır?</h2><p>Alan, litre başına verim ve kat sayısı kullanılarak yaklaşık tüketim bulunur.</p></section>
-<section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>const areaInput=document.getElementById('a'), coverageInput=document.getElementById('c'), coatsInput=document.getElementById('n');
+<section class="seo-copy"><h2>Boya Miktarı Nasıl Hesaplanır?</h2><p>Boya miktarı, boyanacak toplam alanın ürünün yaklaşık kapatma kapasitesine bölünmesiyle tahmin edilir. Yüzeyin emiciliği ve kat sayısı sonucu değiştirebilir.</p><h2>Sık Sorulan Sorular</h2><h3>Boya kaç metrekare yer boyar?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>İki kat boya için ne kadar boya gerekir?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Kapı ve pencere alanları düşülür mü?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><div class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="metrekare-alan-hesaplama.html">Metrekare Alan Hesaplama</a><a href="maliyet-hesaplama.html">Maliyet Hesaplama</a><a href="birim-fiyat.html">Birim Fiyat</a></div></div></section></main><script>const areaInput=document.getElementById('a'), coverageInput=document.getElementById('c'), coatsInput=document.getElementById('n');
 const litreOutput=document.getElementById('l'), resultBox=document.getElementById('result');
 function calc(){
  const area=Number(areaInput.value)||0, coverage=Number(coverageInput.value)||0, coats=Number(coatsInput.value)||0;

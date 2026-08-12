@@ -1,19 +1,9 @@
 <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Enflasyon Farkı Hesaplama | Yeni Tutarı Bul</title><meta name="description" content="Başlangıç tutarı ve enflasyon oranından enflasyon farkını ve yeni karşılığını hesapla."><meta name="robots" content="index,follow">
-<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/enflasyon-fark-hesaplama.html">
-<meta name="theme-color" content="#0b1220">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="HesaplaBoz">
-<meta property="og:title" content="Enflasyon Farkı Hesaplama | Yeni Tutarı Bul">
-<meta property="og:description" content="Başlangıç tutarı ve enflasyon oranından enflasyon farkını ve yeni karşılığını hesapla.">
-<meta property="og:url" content="https://hesaplaboz.vercel.app/calculators/enflasyon-fark-hesaplama.html">
-<meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="style.css"></head>
+<title>Enflasyon Farkı Hesaplama | HesaplaBoz</title><meta name="description" content="Bir tutarın enflasyon oranıyla ne kadar değiştiğini hızlıca hesapla."><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/enflasyon-fark-hesaplama.html"><link rel="stylesheet" href="style.css"></head>
 <body><header class="nav"><a class="brand" href="../index.html"><span class="brand-mark">H</span><span>Hesapla<span>Boz</span></span></a><a class="back" href="../index.html">← Tüm hesaplamalar</a></header>
 <main class="wrap"><span class="crumb">Finans</span><h1>Enflasyon Farkı Hesaplama</h1><p>Bir tutarın verilen enflasyon oranıyla değişimini hesapla.</p><div class="calc"><div class="grid"><div><label>Başlangıç Tutarı (TL)</label><input id="p" type="number" value="100000"></div><div><label>Enflasyon (%)</label><input id="r" type="number" value="30"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Fark</p><div class="big" id="d"></div><p>Yeni karşılık</p><div class="big" id="t"></div></div><div class="note">Tek dönemlik basit enflasyon karşılığıdır; resmi TÜFE verisi değildir.</div></div>
-<section class="seo-copy"><h2>Enflasyon Farkı Hesaplama nasıl hesaplanır?</h2><p>Başlangıç tutarı enflasyon oranıyla çarpılarak fiyat düzeyindeki değişim bulunur.</p></section>
-<section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}
+<section class="seo-copy"><h2>Enflasyon Farkı Nasıl Hesaplanır?</h2><p>Enflasyon hesabında başlangıç tutarı seçilen oranla artırılarak yeni nominal tutar bulunur. Birden fazla dönem için bileşik etki ayrıca dikkate alınabilir.</p><h2>Sık Sorulan Sorular</h2><h3>Enflasyon farkı nedir?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Enflasyon bir tutarı nasıl etkiler?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Yıllık enflasyon nasıl uygulanır?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><div class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="oran-degisimi.html">Oran Degisimi</a><a href="yuzde-hesaplama.html">Yuzde Hesaplama</a><a href="yatirim-getirisi-hesaplama.html">Yatirim Getirisi Hesaplama</a></div></div></section></main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}
 const principalInput=document.getElementById('p'), rateInput=document.getElementById('r');
 const differenceOutput=document.getElementById('d'), totalOutput=document.getElementById('t'), resultBox=document.getElementById('result');
 function calc(){

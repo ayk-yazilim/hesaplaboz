@@ -1,19 +1,9 @@
 <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ciro Hesaplama | Satış Cirosunu Hesapla</title><meta name="description" content="Birim satış fiyatı ve satış adedinden toplam ciroyu hızlıca hesapla."><meta name="robots" content="index,follow">
-<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/ciro-hesaplama.html">
-<meta name="theme-color" content="#0b1220">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="HesaplaBoz">
-<meta property="og:title" content="Ciro Hesaplama | Satış Cirosunu Hesapla">
-<meta property="og:description" content="Birim satış fiyatı ve satış adedinden toplam ciroyu hızlıca hesapla.">
-<meta property="og:url" content="https://hesaplaboz.vercel.app/calculators/ciro-hesaplama.html">
-<meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="style.css"></head>
+<title>Ciro Hesaplama | HesaplaBoz</title><meta name="description" content="Satış fiyatı ve satış adedi üzerinden toplam ciroyu hızlıca hesapla."><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/ciro-hesaplama.html"><link rel="stylesheet" href="style.css"></head>
 <body><header class="nav"><a class="brand" href="../index.html"><span class="brand-mark">H</span><span>Hesapla<span>Boz</span></span></a><a class="back" href="../index.html">← Tüm hesaplamalar</a></header>
 <main class="wrap"><span class="crumb">İşletme</span><h1>Ciro Hesaplama</h1><p>Satış fiyatı ve adet bilgisiyle toplam satış cirosunu hızlıca bul.</p><div class="calc"><div class="grid"><div><label>Birim Satış Fiyatı (TL)</label><input id="p" type="number" value="500"></div><div><label>Satış Adedi</label><input id="q" type="number" value="250"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Toplam ciro</p><div class="big" id="t"></div></div><div class="note">Ciro satış geliridir; kâr anlamına gelmez.</div></div>
-<section class="seo-copy"><h2>Ciro Hesaplama nasıl hesaplanır?</h2><p>Basit ciro hesabında birim satış fiyatı ile satış adedi çarpılır.</p></section>
-<section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}
+<section class="seo-copy"><h2>Ciro Nasıl Hesaplanır?</h2><p>Ciro, belirli bir dönemde yapılan satışlardan elde edilen toplam satış tutarıdır. Basit hesaplamada satış fiyatı ile adet çarpılır.</p><h2>Sık Sorulan Sorular</h2><h3>Ciro ile kâr arasındaki fark nedir?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Toplam ciro nasıl bulunur?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Ciro artarken kâr neden düşebilir?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><div class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="kar-zarar-hesaplama.html">Kar Zarar Hesaplama</a><a href="kar-marji.html">Kar Marji</a><a href="maliyet-hesaplama.html">Maliyet Hesaplama</a></div></div></section></main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}
 const priceInput=document.getElementById('p'), qtyInput=document.getElementById('q'), totalOutput=document.getElementById('t'), resultBox=document.getElementById('result');
 function calc(){
  const price=Number(priceInput.value)||0, qty=Number(qtyInput.value)||0;

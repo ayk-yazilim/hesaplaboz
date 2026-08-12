@@ -1,19 +1,9 @@
 <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Oran Orantı Hesaplama | X Değerini Bul</title><meta name="description" content="A:B = C:X doğru orantısında bilinmeyen X değerini hızlıca hesapla."><meta name="robots" content="index,follow">
-<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/oran-oranti-hesaplama.html">
-<meta name="theme-color" content="#0b1220">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="HesaplaBoz">
-<meta property="og:title" content="Oran Orantı Hesaplama | X Değerini Bul">
-<meta property="og:description" content="A:B = C:X doğru orantısında bilinmeyen X değerini hızlıca hesapla.">
-<meta property="og:url" content="https://hesaplaboz.vercel.app/calculators/oran-oranti-hesaplama.html">
-<meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="style.css"></head>
+<title>Oran Orantı Hesaplama | HesaplaBoz</title><meta name="description" content="Doğru orantıdaki bilinmeyen değeri hızlıca hesapla."><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/oran-oranti-hesaplama.html"><link rel="stylesheet" href="style.css"></head>
 <body><header class="nav"><a class="brand" href="../index.html"><span class="brand-mark">H</span><span>Hesapla<span>Boz</span></span></a><a class="back" href="../index.html">← Tüm hesaplamalar</a></header>
 <main class="wrap"><span class="crumb">Günlük</span><h1>Oran Orantı Hesaplama</h1><p>Üç bilinen değerle bilinmeyen orantı değerini hızlıca bul.</p><div class="calc"><div class="grid"><div><label>A</label><input id="a" type="number" value="4"></div><div><label>B</label><input id="b" type="number" value="10"></div><div><label>C</label><input id="c" type="number" value="7"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Bilinmeyen X</p><div class="big" id="x"></div></div><div class="note">Doğru orantı varsayımıyla çalışır.</div></div>
-<section class="seo-copy"><h2>Oran Orantı Hesaplama nasıl hesaplanır?</h2><p>Doğru orantıda A:B = C:X kabul edilir ve bilinmeyen çapraz çarpımla bulunur.</p></section>
-<section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>const aInput=document.getElementById('a'), bInput=document.getElementById('b'), cInput=document.getElementById('c');
+<section class="seo-copy"><h2>Oran Orantı Nasıl Hesaplanır?</h2><p>Oran, iki büyüklüğün birbirine göre ilişkisini gösterir. Orantıda iki oranın eşitliği kullanılarak bilinmeyen değer bulunabilir.</p><h2>Sık Sorulan Sorular</h2><h3>Doğru orantı nedir?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Oran nasıl kurulur?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Bilinmeyen değer nasıl bulunur?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><div class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="yuzde-hesaplama.html">Yuzde Hesaplama</a><a href="oran-degisimi.html">Oran Degisimi</a><a href="birim-fiyat.html">Birim Fiyat</a></div></div></section></main><script>const aInput=document.getElementById('a'), bInput=document.getElementById('b'), cInput=document.getElementById('c');
 const xOutput=document.getElementById('x'), resultBox=document.getElementById('result');
 function calc(){
  const a=Number(aInput.value)||0, b=Number(bInput.value)||0, c=Number(cInput.value)||0;

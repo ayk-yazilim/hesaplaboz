@@ -2,13 +2,12 @@
 <html lang="tr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Yüzde Hesaplama | HesaplaBoz</title>
-<meta name="description" content="Bir sayının yüzdesini, yüzde artışını ve yüzde azalışını ücretsiz hesapla.">
+<meta name="description" content="Bir sayının yüzdesini, yüzde artışı veya azalışı hızlı ve ücretsiz hesapla.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/yuzde-hesaplama.html">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
 </head><body>
 <header class="nav"><a class="brand" href="../index.html"><span class="brand-mark">H</span><span>Hesapla<span>Boz</span></span></a><a class="back" href="../index.html">← Tüm hesaplamalar</a></header>
 <main class="wrap"><span class="crumb">Günlük</span><h1>Yüzde Hesaplama</h1><p>Bir tutarın yüzdesini veya yüzde ekleme ve çıkarma sonucunu hızlıca hesapla.</p>
 <div class="calc"><div class="grid"><div><label>Değer</label><input id="a" type="number" value="1000"></div><div><label>Yüzde (%)</label><input id="p" type="number" value="20"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Yüzde tutarı</p><div class="big" id="part"></div><p>Yüzde eklenmiş değer</p><div class="big" id="plus"></div><p>Yüzde çıkarılmış değer</p><div class="big" id="minus"></div></div><div class="note">Temel yüzde hesabıdır. Vergi veya faiz gibi özel işlemlerde ilgili aracı kullan.</div></div>
-<section class="seo-copy"><h2>Yüzde Hesaplama nasıl hesaplanır?</h2><p>Bir sayının yüzde değerini bulmak için sayı ile yüzde oranı çarpılır ve 100'e bölünür. HesaplaBoz sonucu anında gösterir.</p></section>
-</main><script>function f(n){return n.toLocaleString('tr-TR',{maximumFractionDigits:2})}function calc(){const a=+document.getElementById('a').value||0,p=+document.getElementById('p').value||0,x=a*p/100;part.textContent=f(x);plus.textContent=f(a+x);minus.textContent=f(a-x);result.style.display='block'}calc();</script></body></html>
+<section class="seo-copy"><h2>Yüzde Hesaplama Nasıl Yapılır?</h2><p>Bir sayının belirli yüzdesini bulmak için sayı yüzde değeriyle çarpılır ve 100&#x27;e bölünür. Artış ve azalış hesaplarında başlangıç değeri esas alınır.</p><h2>Sık Sorulan Sorular</h2><h3>Bir sayının yüzdesi nasıl bulunur?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Yüzde artış nasıl hesaplanır?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Yüzde azalış nasıl hesaplanır?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><div class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="oran-degisimi.html">Oran Degisimi</a><a href="iskonto.html">Iskonto</a><a href="oran-oranti-hesaplama.html">Oran Oranti Hesaplama</a></div></div></section></main><script>function f(n){return n.toLocaleString('tr-TR',{maximumFractionDigits:2})}function calc(){const a=+document.getElementById('a').value||0,p=+document.getElementById('p').value||0,x=a*p/100;part.textContent=f(x);plus.textContent=f(a+x);minus.textContent=f(a-x);result.style.display='block'}calc();</script></body></html>

@@ -2,13 +2,12 @@
 <html lang="tr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Birim Fiyat Hesaplama | HesaplaBoz</title>
-<meta name="description" content="Toplam fiyat ve miktardan adet, kilogram veya litre başına birim fiyatı hesapla.">
+<meta name="description" content="Ürün toplam fiyatı ve miktarı üzerinden adet, kilogram veya litre başına birim fiyatı hesapla.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/birim-fiyat.html">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
 </head><body>
 <header class="nav"><a class="brand" href="../index.html"><span class="brand-mark">H</span><span>Hesapla<span>Boz</span></span></a><a class="back" href="../index.html">← Tüm hesaplamalar</a></header>
 <main class="wrap"><span class="crumb">İşletme</span><h1>Birim Fiyat Hesaplama</h1><p>Toplam tutarı ve miktarı girerek ürünün birim fiyatını saniyeler içinde bul.</p>
 <div class="calc"><div class="grid"><div><label>Toplam Tutar (TL)</label><input id="total" type="number" value="1250"></div><div><label>Miktar</label><input id="qty" type="number" value="25" min="0.0001"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Birim fiyat</p><div class="big" id="unit"></div></div><div class="note">Miktar; adet, kg, litre veya metre gibi kullandığın ölçü birimi olabilir.</div></div>
-<section class="seo-copy"><h2>Birim Fiyat Hesaplama nasıl hesaplanır?</h2><p>Birim fiyat, toplam tutarın toplam miktara bölünmesiyle bulunur. Aynı yöntem adet, kilogram, litre ve metre gibi ölçülerde kullanılabilir.</p></section>
-</main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}function calc(){const t=+total.value||0,q=+qty.value||0;unit.textContent=q>0?tl(t/q):'Miktar 0 olamaz';result.style.display='block'}calc();</script></body></html>
+<section class="seo-copy"><h2>Birim Fiyat Nasıl Hesaplanır?</h2><p>Birim fiyat, toplam fiyatın toplam miktara bölünmesiyle bulunur. Böylece farklı paket ve miktarlardaki ürünler daha kolay karşılaştırılabilir.</p><h2>Sık Sorulan Sorular</h2><h3>Birim fiyat neden önemlidir?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Kg başına fiyat nasıl hesaplanır?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Adet fiyatı nasıl bulunur?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><div class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="maliyet-hesaplama.html">Maliyet Hesaplama</a><a href="yuzde-hesaplama.html">Yuzde Hesaplama</a><a href="iskonto.html">Iskonto</a></div></div></section></main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}function calc(){const t=+total.value||0,q=+qty.value||0;unit.textContent=q>0?tl(t/q):'Miktar 0 olamaz';result.style.display='block'}calc();</script></body></html>

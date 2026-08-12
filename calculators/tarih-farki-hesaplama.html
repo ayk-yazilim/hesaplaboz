@@ -1,19 +1,9 @@
 <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tarih Farkı Hesaplama | İki Tarih Arası Kaç Gün?</title><meta name="description" content="Başlangıç ve bitiş tarihlerini seçerek iki tarih arasındaki gün farkını hesapla."><meta name="robots" content="index,follow">
-<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/tarih-farki-hesaplama.html">
-<meta name="theme-color" content="#0b1220">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="HesaplaBoz">
-<meta property="og:title" content="Tarih Farkı Hesaplama | İki Tarih Arası Kaç Gün?">
-<meta property="og:description" content="Başlangıç ve bitiş tarihlerini seçerek iki tarih arasındaki gün farkını hesapla.">
-<meta property="og:url" content="https://hesaplaboz.vercel.app/calculators/tarih-farki-hesaplama.html">
-<meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="style.css"></head>
+<title>Tarih Farkı Hesaplama | HesaplaBoz</title><meta name="description" content="İki tarih arasındaki gün farkını hızlıca hesapla."><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hesaplaboz.vercel.app/calculators/tarih-farki-hesaplama.html"><link rel="stylesheet" href="style.css"></head>
 <body><header class="nav"><a class="brand" href="../index.html"><span class="brand-mark">H</span><span>Hesapla<span>Boz</span></span></a><a class="back" href="../index.html">← Tüm hesaplamalar</a></header>
 <main class="wrap"><span class="crumb">Günlük</span><h1>Tarih Farkı Hesaplama</h1><p>Başlangıç ve bitiş tarihini seçerek aradaki gün farkını bul.</p><div class="calc"><div class="grid"><div><label>Başlangıç</label><input id="a" type="date"></div><div><label>Bitiş</label><input id="b" type="date"></div></div><button class="btn" onclick="calc()">HESAPLA</button><div class="result" id="result"><p>Gün farkı</p><div class="big" id="d"></div></div><div class="note">Sonuç iki tarih arasındaki tam gün farkıdır.</div></div>
-<section class="seo-copy"><h2>Tarih Farkı Hesaplama nasıl hesaplanır?</h2><p>İki tarih arasındaki süre, tarihlerin gün cinsinden farkı alınarak hesaplanır.</p></section>
-<section class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="../index.html#hesaplamalar">Tüm araçlar</a><a href="yuzde-hesaplama.html">Yüzde</a><a href="kar-zarar-hesaplama.html">Kâr / Zarar</a></div></section>
-</main><script>const startInput=document.getElementById('a'), endInput=document.getElementById('b'), dayOutput=document.getElementById('d'), resultBox=document.getElementById('result');
+<section class="seo-copy"><h2>Tarih Farkı Nasıl Hesaplanır?</h2><p>İki tarih arasındaki fark takvim günleri üzerinden hesaplanır. Başlangıç ve bitiş günlerinin dahil edilip edilmemesi kullanılan yönteme göre değişebilir.</p><h2>Sık Sorulan Sorular</h2><h3>İki tarih arasında kaç gün var?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Başlangıç günü hesaba katılır mı?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><h3>Artık yıllar nasıl değerlendirilir?</h3><p>HesaplaBoz üzerindeki araçla bu değeri doğrudan hesaplayabilir ve sonucu adım adım kontrol edebilirsin.</p><div class="related"><h2>İlgili hesaplamalar</h2><div class="related-links"><a href="vade-farki-hesaplama.html">Vade Farki Hesaplama</a><a href="yuzde-hesaplama.html">Yuzde Hesaplama</a><a href="oran-oranti-hesaplama.html">Oran Oranti Hesaplama</a></div></div></section></main><script>const startInput=document.getElementById('a'), endInput=document.getElementById('b'), dayOutput=document.getElementById('d'), resultBox=document.getElementById('result');
 const now=new Date();
 startInput.value=now.toISOString().slice(0,10);
 endInput.value=new Date(now.getTime()+30*86400000).toISOString().slice(0,10);
