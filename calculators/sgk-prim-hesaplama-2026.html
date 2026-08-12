@@ -7,4 +7,14 @@
 <div class="field full"><label for="type">İşveren SGK oranı</label><select id="type"><option value="19.75">Diğer sektörler · 2 puan indirim</option><option value="16.75">İmalat · 5 puan indirim</option><option value="21.75">İndirim uygulanmıyor</option></select></div>
 </div><button class="btn" type="submit">PRİMİ HESAPLA</button></form><div class="result" id="result" style="display:none"><div class="result-grid"><div class="result-item"><span>Çalışan SGK primi</span><strong id="a">-</strong></div><div class="result-item"><span>Çalışan işsizlik primi</span><strong id="b">-</strong></div><div class="result-item"><span>İşveren SGK primi</span><strong id="c">-</strong></div><div class="result-item"><span>İşveren işsizlik primi</span><strong id="d">-</strong></div><div class="result-item"><span>Çalışan toplam kesinti</span><strong id="e">-</strong></div><div class="result-item"><span>İşveren toplam primi</span><strong id="f">-</strong></div></div></div><p class="note">2026 parametreleri kullanılır. Hesaplama bilgilendirme amaçlıdır; kişisel durum, teşvikler ve bordro uygulamaları sonucu değiştirebilir.</p></section><section class="content"><h2>2026 SGK primi nasıl hesaplanır?</h2><p>Standart 4/a çalışan hesabında çalışan SGK payı %14 ve işsizlik sigortası payı %1'dir. İşveren SGK payı ise uygulanan indirim ve sektör durumuna göre değişebilir. 2026 resmi tablolarında 16,75%, 19,75% ve indirimsiz 21,75% örnekleri yer almaktadır.</p></section></main><script>function tl(n){return n.toLocaleString('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2})}
 const g=document.getElementById('g'),type=document.getElementById('type'),result=document.getElementById('result');
-function calc(){const gross=Math.max(0,Number(g.value)||0),rate=Number(type.value),peK=Math.min(gross,297270);const a=peK*.14,b=peK*.01,c=peK*rate/100,d=peK*.02;document.getElementById('a').textContent=tl(a);document.getElementById('b').textContent=tl(b);document.getElementById('c').textContent=tl(c);document.getElementById('d').textContent=tl(d);document.getElementById('e').textContent=tl(a+b);document.getElementById('f').textContent=tl(c+d);result.style.display='block'}calc();</script></body></html>
+function calc(){const gross=Math.max(0,Number(g.value)||0),rate=Number(type.value),peK=Math.min(gross,297270);const a=peK*.14,b=peK*.01,c=peK*rate/100,d=peK*.02;document.getElementById('a').textContent=tl(a);document.getElementById('b').textContent=tl(b);document.getElementById('c').textContent=tl(c);document.getElementById('d').textContent=tl(d);document.getElementById('e').textContent=tl(a+b);document.getElementById('f').textContent=tl(c+d);result.style.display='block'}calc();</script>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span>AYK Yazılım © 2026</span>
+  </div>
+</footer>
+
+.site-footer{margin-top:80px;border-top:1px solid #e6eaf0;background:#fff}
+.site-footer-inner{max-width:1120px;margin:auto;padding:28px 24px;text-align:center;color:#7b8da5;font-size:13px}
+
+</body></html>

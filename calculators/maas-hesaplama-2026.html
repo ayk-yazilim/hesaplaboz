@@ -10,4 +10,14 @@
 const g=document.getElementById('g'),m=document.getElementById('m'),cum=document.getElementById('cum'),result=document.getElementById('result');
 const brackets=[[190000,.15],[400000,.20],[1500000,.27],[5300000,.35],[Infinity,.40]];
 function taxAt(x){let prev=0,t=0;for(const [limit,rate] of brackets){const part=Math.max(0,Math.min(x,limit)-prev);t+=part*rate;if(x<=limit)break;prev=limit}return t}
-function calc(){const gross=Math.max(0,Number(g.value)||0),month=Number(m.value),prev=Math.max(0,Number(cum.value)||0);const peK=Math.min(gross,297270),sgk=peK*.14,unemp=peK*.01,taxBase=gross-sgk-unemp;const actualPrev=prev,actualNow=prev+taxBase;const minTaxBase=33030*.85;const minPrev=(month-1)*minTaxBase,minNow=month*minTaxBase;const incomeTax=Math.max(0,(taxAt(actualNow)-taxAt(actualPrev))-(taxAt(minNow)-taxAt(minPrev)));const stamp=Math.max(0,(gross-33030)*.00759);const net=gross-sgk-unemp-incomeTax-stamp;document.getElementById('net').textContent=tl(net);document.getElementById('sgk').textContent=tl(sgk);document.getElementById('unemp').textContent=tl(unemp);document.getElementById('tax').textContent=tl(incomeTax);document.getElementById('stamp').textContent=tl(stamp);document.getElementById('base').textContent=tl(taxBase);result.style.display='block'}calc();</script></body></html>
+function calc(){const gross=Math.max(0,Number(g.value)||0),month=Number(m.value),prev=Math.max(0,Number(cum.value)||0);const peK=Math.min(gross,297270),sgk=peK*.14,unemp=peK*.01,taxBase=gross-sgk-unemp;const actualPrev=prev,actualNow=prev+taxBase;const minTaxBase=33030*.85;const minPrev=(month-1)*minTaxBase,minNow=month*minTaxBase;const incomeTax=Math.max(0,(taxAt(actualNow)-taxAt(actualPrev))-(taxAt(minNow)-taxAt(minPrev)));const stamp=Math.max(0,(gross-33030)*.00759);const net=gross-sgk-unemp-incomeTax-stamp;document.getElementById('net').textContent=tl(net);document.getElementById('sgk').textContent=tl(sgk);document.getElementById('unemp').textContent=tl(unemp);document.getElementById('tax').textContent=tl(incomeTax);document.getElementById('stamp').textContent=tl(stamp);document.getElementById('base').textContent=tl(taxBase);result.style.display='block'}calc();</script>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span>AYK Yazılım © 2026</span>
+  </div>
+</footer>
+
+.site-footer{margin-top:80px;border-top:1px solid #e6eaf0;background:#fff}
+.site-footer-inner{max-width:1120px;margin:auto;padding:28px 24px;text-align:center;color:#7b8da5;font-size:13px}
+
+</body></html>
