@@ -113,4 +113,14 @@ function normalizeSearch(s){return (s||'').toLocaleLowerCase('tr-TR').normalize(
 function filterTools(q){const query=normalizeSearch(q),words=query?query.split(' '):[];let n=0;document.querySelectorAll('.tool').forEach(x=>{const text=normalizeSearch((x.dataset.name||'')+' '+x.innerText);const ok=!query||words.every(w=>text.includes(w));x.style.display=ok?'flex':'none';if(ok)n++});document.getElementById('empty').hidden=n!==0}
 document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();document.getElementById('search').focus()}})
 </script>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span>AYK Yazılım © 2026</span>
+  </div>
+</footer>
+
+.site-footer{margin-top:80px;border-top:1px solid #e6eaf0;background:#fff}
+.site-footer-inner{max-width:1120px;margin:auto;padding:28px 24px;text-align:center;color:#7b8da5;font-size:13px}
+
 </body></html>
