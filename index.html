@@ -7,17 +7,6 @@
 <meta name="description" content="KDV, kredi, yakıt, kâr marjı, iskonto ve daha fazlasını HesaplaBoz ile anında ve ücretsiz hesapla.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://hesaplaboz.vercel.app/">
-<meta name="theme-color" content="#0b1220">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="HesaplaBoz">
-<meta property="og:title" content="HesaplaBoz | Anında Hesapla, Ezberleri Boz!">
-<meta property="og:description" content="KDV, kredi, yakıt, kâr, faiz ve günlük hesaplamaları hızlı ve ücretsiz yap.">
-<meta property="og:url" content="https://hesaplaboz.vercel.app/">
-<meta name="twitter:card" content="summary">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"HesaplaBoz","url":"https://hesaplaboz.vercel.app/","description":"Ücretsiz online hesaplama araçları.","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","inLanguage":"tr-TR","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"AYK Yazılım"}}
-</script>
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
 :root{--ink:#0b1220;--muted:#667085;--line:#e6ebf2;--blue:#315efb;--bg:#f7f9fc}
@@ -55,7 +44,7 @@ footer{max-width:1120px;margin:auto;border-top:1px solid var(--line);padding:28p
 <p class="herotext">Finans, araç, muhasebe, işletme ve günlük hayat için ihtiyacın olan hesabı saniyeler içinde yap.</p>
 <div class="searchbox"><span class="searchicon">⌕</span><input id="search" placeholder="Ne hesaplamak istiyorsun? Örn. KDV, kredi, yakıt..." oninput="filterTools(this.value)"><kbd>⌘ K</kbd></div>
 <div class="quick"><span>Popüler:</span><a href="calculators/kdv.html">KDV</a><a href="calculators/kredi.html">Kredi</a><a href="calculators/yakit.html">Yakıt</a><a href="calculators/kar-marji.html">Kâr Marjı</a><a href="calculators/iskonto.html">İskonto</a></div>
-<div class="proof"><div><strong>23</strong><small>ücretsiz araç</small></div><i></i><div><strong>5</strong><small>kategori</small></div><i></i><div><strong>∞</strong><small>hesaplama</small></div></div>
+<div class="proof"><div><strong>26</strong><small>ücretsiz araç</small></div><i></i><div><strong>5</strong><small>kategori</small></div><i></i><div><strong>∞</strong><small>hesaplama</small></div></div>
 </section>
 
 <section class="section">
@@ -94,6 +83,10 @@ footer{max-width:1120px;margin:auto;border-top:1px solid var(--line);padding:28p
 <a class="tool" data-name="boya miktarı i̇nşaat & ev" href="calculators/boya-miktari-hesaplama.html"><span class="icon orange">↗</span><div class="toolbody"><span class="tag">İNŞAAT & EV</span><h3>Boya Miktarı</h3><p>Alan ve kat sayısından yaklaşık boya ihtiyacını bul.</p></div><span class="arrow">↗</span></a>
 <a class="tool" data-name="tarih farkı günlük" href="calculators/tarih-farki-hesaplama.html"><span class="icon pink">↗</span><div class="toolbody"><span class="tag">GÜNLÜK</span><h3>Tarih Farkı</h3><p>İki tarih arasındaki gün sayısını hesapla.</p></div><span class="arrow">↗</span></a>
 <a class="tool" data-name="döviz kâr zarar finans" href="calculators/doviz-kar-zarar-hesaplama.html"><span class="icon violet">↗</span><div class="toolbody"><span class="tag">FINANS</span><h3>Döviz Kâr Zarar</h3><p>Kur değişiminden TL bazında farkı gör.</p></div><span class="arrow">↗</span></a>
+
+<a class="tool" data-name="maaş maas maaş hesaplama maas hesaplama 2026 net maaş bordro" href="calculators/maas-hesaplama-2026.html"><span class="icon blue">₺</span><div class="toolbody"><span class="tag">BORDRO</span><h3>Maaş Hesaplama 2026</h3><p>Brütten net maaşı ve kesintileri hesapla.</p></div><span class="arrow">↗</span></a>
+<a class="tool" data-name="sgk prim sgk prim hesaplama sigorta sigorta hesaplama 2026" href="calculators/sgk-prim-hesaplama-2026.html"><span class="icon purple">✓</span><div class="toolbody"><span class="tag">SGK</span><h3>SGK Prim Hesaplama</h3><p>Çalışan ve işveren primlerini hesapla.</p></div><span class="arrow">↗</span></a>
+<a class="tool" data-name="işveren isveren maliyeti işverene maliyet maas maliyeti 2026" href="calculators/isverene-maliyet-hesaplama-2026.html"><span class="icon orange">₺</span><div class="toolbody"><span class="tag">İŞLETME</span><h3>İşverene Maliyet</h3><p>Brüt maaşın işverene maliyetini bul.</p></div><span class="arrow">↗</span></a>
 </div>
 <div id="empty" class="empty" hidden><strong>Aradığını bulamadık.</strong><span>Başka bir kelime deneyelim.</span></div>
 </section>
@@ -116,7 +109,8 @@ footer{max-width:1120px;margin:auto;border-top:1px solid var(--line);padding:28p
 </main>
 <footer><a class="brand" href="index.html"><span class="brand-mark">H</span><span>Hesapla<span class="brand-blue">Boz</span></span></a><span>Anında Hesapla, Ezberleri Boz!</span></footer>
 <script>
-function filterTools(q){q=(q||'').toLocaleLowerCase('tr-TR').trim();let n=0;document.querySelectorAll('.tool').forEach(x=>{let ok=!q||(x.dataset.name||'').toLocaleLowerCase('tr-TR').includes(q);x.style.display=ok?'flex':'none';if(ok)n++});document.getElementById('empty').hidden=n!==0}
+function normalizeSearch(s){return (s||'').toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ı/g,'i').replace(/[^a-z0-9çğıöşü\s]/gi,' ').replace(/\s+/g,' ').trim()}
+function filterTools(q){const query=normalizeSearch(q),words=query?query.split(' '):[];let n=0;document.querySelectorAll('.tool').forEach(x=>{const text=normalizeSearch((x.dataset.name||'')+' '+x.innerText);const ok=!query||words.every(w=>text.includes(w));x.style.display=ok?'flex':'none';if(ok)n++});document.getElementById('empty').hidden=n!==0}
 document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();document.getElementById('search').focus()}})
 </script>
 </body></html>
